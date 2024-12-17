@@ -7,11 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      height: {
-        '150': '150px',
-      },
-      fontFamily: {
-        'alice': ['Alice', 'serif'],
+      colors: {
+        'primary': 'rgba(63,114,175,0.2)',
+        'secondary': '#123D4E',
+        'primary-original': '#3F72AB',
       },
     },
   },
