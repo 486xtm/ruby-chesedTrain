@@ -1,4 +1,4 @@
-%div{ class: "lg:bg-primary text-white w-full transition-all duration-300  font-alice h-[100px]" }
+%div{ class: "lg:bg-primary text-white w-full transition-all duration-300  font-alice lg:h-[100px] h-[90px]" }
   .lg:flex.lg:flex-row.items-center.justify-between.hidden.pr-12 
     .logo
       = image_tag "/imgs/logo_h.png", class: "h-[100px]", alt: "Header Logo"
@@ -9,24 +9,24 @@
       %span{ class: "text-secondary text-[0.9rem]"} ב״ה
   .lg:hidden.flex.flex-row.items-center.justify-between
     .flex.flex-row.items-center.justify-center
-      %span{ class: "text-secondary text-[1rem] w-[4rem] text-center"} ב״ה
+      %span{ class: "text-secondary text-[1rem] w-[90px] text-center"} ב״ה
     .logo
-      = image_tag "/imgs/logo_h.png", class: "h-[100px]", alt: "Header Logo"
-    %button.relative#mobile-menu-button{onclick: "toggleMenu()", class: "h-[100px] flex items-center"}
-      = image_tag "/icons/menu.svg", class: "h-[100px]", alt: "Menu", id: "menu-icon"
-    #mobile-menu{class: "hidden absolute top-[100px] right-0 w-full bg-white shadow-lg z-50"}
+      = image_tag "/imgs/logo_h.png", class: "h-[90px]", alt: "Header Logo"
+    %button.relative#mobile-menu-button{onclick: "toggleMenu()", class: "h-[90px] flex items-center"}
+      = image_tag "/icons/menu.svg", class: "h-[90px]", alt: "Menu", id: "menu-icon"
+    #mobile-menu{class: "hidden absolute top-[90px] right-0 w-full bg-white shadow-xl z-50"}
       .flex.flex-col.items-center.py-4.space-y-4
         = link_to "Homepage", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
         = link_to "Login", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
         = link_to "Start A Chesed Train", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
     :javascript
       function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      menu.classList.toggle('hidden');
-      if (menu.classList.contains('hidden')) {
-      menuIcon.src = '/icons/menu.svg';
-      } else {
-      menuIcon.src = '/icons/menu_close.svg';
-      }
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        menu.classList.toggle('hidden');
+        if (menu.classList.contains('hidden')) {
+          menuIcon.src = '/icons/menu.svg';
+        } else {
+          menuIcon.src = '/icons/menu_close.svg';
+        }
       }
