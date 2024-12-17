@@ -6,7 +6,14 @@ module.exports = {
     './app/components/**/*.{erb,haml,html,slim}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '150': '150px',
+      },
+      fontFamily: {
+        'alice': ['Alice', 'serif'],
+      },
+    },
   },
   plugins: [],
 } 
