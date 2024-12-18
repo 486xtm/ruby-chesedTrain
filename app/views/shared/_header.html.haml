@@ -20,7 +20,7 @@
       = image_tag "/icons/menu.svg", class: "h-[90px]", alt: "Menu", id: "menu-icon"
     #mobile-menu{class: "hidden absolute top-[90px] right-0 w-full bg-white shadow-xl z-50"}
       .flex.flex-col.items-center.py-4.space-y-4
-        = link_to "Homepage", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
+        = link_to "Homepage", root_path, class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
         = link_to "Login", "/signIn", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
         = link_to "Start A Chesed Train", "/train", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
     :javascript
