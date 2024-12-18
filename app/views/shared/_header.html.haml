@@ -12,8 +12,9 @@
   .lg:hidden.flex.flex-row.items-center.justify-between
     .flex.flex-row.items-center.justify-center
       %span{ class: "text-secondary text-[1rem] w-[90px] text-center"} ב״ה
-    .logo
-      = image_tag "/imgs/logo_h.png", class: "h-[90px]", alt: "Header Logo"
+    .logo.cursor-pointer.z-10
+      = link_to root_path do
+        = image_tag "/imgs/logo_h.png", class: "h-[90px]", alt: "Header Logo"
     %button.relative#mobile-menu-button{onclick: "toggleMenu()", class: "h-[90px] flex items-center"}
       = image_tag "/icons/menu.svg", class: "h-[90px]", alt: "Menu", id: "menu-icon"
     #mobile-menu{class: "hidden absolute top-[90px] right-0 w-full bg-white shadow-xl z-50"}

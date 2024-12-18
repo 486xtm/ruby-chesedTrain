@@ -4,24 +4,13 @@
 
 /* Custom styles can go here */
 @layer base {
-  [data-animation="fade-in"] {
-    animation: fadeIn 1s ease-in;
-  }
+  /* body {
+    font-family: 'Alice', serif;
+  } */
 
-  [data-animation="slide-in"] {
-    animation: slideIn 1s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideIn {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
+  /* h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+  } */
   .font_large {
     font-weight: 900;
   }
