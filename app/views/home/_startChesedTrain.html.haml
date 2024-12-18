@@ -6,10 +6,11 @@
       %span{ class: "lg:text-[1.5rem] text-[0.7rem] font-alice text-center"} Start a Chesed Train
       = image_tag "/icons/arrow_left.svg", class: "lg:w-[2rem] w-[0.7rem] lg:h-[2.2rem] h-[0.7rem] lg:border lg:border-secondary lg:rounded-lg lg:px-[0.4rem] lg:py-[0.5rem]", alt: "Arrow Left"
   %div{ class: "lg:h-[40rem] h-[10rem] flex justify-center items-center"}
-    = image_tag "/imgs/logo_h.png", id: "logo", class: "ml-[200%] w-full transition-all duration-1000 ease-in-out", alt: "Logo"
+    = image_tag "/imgs/logo_h.png", id: "logo", style: "margin-left: 200%;", class: "w-full transition-all duration-1000 ease-in-out", alt: "Logo"
   :javascript
+    const logo = document.querySelector("#logo");
     document.addEventListener("DOMContentLoaded", function() {
-      const logo = document.querySelector("#logo");
-      logo.classList.remove("ml-[200%]");
-      logo.classList.add("ml-[0%]");
+    logo.style.marginLeft = "0";
     });
+   
+
