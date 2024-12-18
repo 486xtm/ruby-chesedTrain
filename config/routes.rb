@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get "signIn" => "auth#signIn", as: :signIn
+  get "signUp" => "auth#signUp", as: :signUp
+
   get "potluck" => "potluck#index", as: :potluck
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest

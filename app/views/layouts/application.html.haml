@@ -10,6 +10,6 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  %body.min-h-screen.bg-gray-100
+  %body.min-h-screen.bg-gray-100{"data-turbo": "true"}
     = yield
     = render Footer::Component.new 

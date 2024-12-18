@@ -1,11 +1,13 @@
 %div{ class: "lg:bg-primary text-white w-full transition-all duration-300  font-alice lg:h-[100px] h-[90px]" }
   .lg:flex.lg:flex-row.items-center.justify-between.hidden.pr-12 
-    .logo
-      = image_tag "/imgs/logo_h.png", class: "h-[100px]", alt: "Header Logo"
+    .logo.cursor-pointer.z-10
+      = link_to root_path do
+        = image_tag "/imgs/logo_h.png", class: "h-[100px] cursor-pointer z-10", alt: "Header Logo"
     %div{ class: "text-secondary xl:text-[3rem] text-[2rem] text-center absolute left-0 right-0 mx-auto"} CHESED TRAIN
     .flex.flex-row.items-center.justify-center.space-x-4
-      %button{ class: "bg-transparent text-secondary xl:w-[9.45rem] w-[7rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary"} Sign In
-      %button{ class: "bg-primary-original text-white xl:w-[11.5rem] w-[9rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary"} Start a Chesed Train
+      = link_to signIn_path, class: "bg-transparent text-secondary xl:w-[9.45rem] w-[7rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary z-[100] inline-block" do
+        Sign In
+      %button{ class: "bg-primary-original text-white xl:w-[11.5rem] w-[9rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary z-[100]"} Start a Chesed Train
       %span{ class: "text-secondary text-[0.9rem]"} ב״ה
   .lg:hidden.flex.flex-row.items-center.justify-between
     .flex.flex-row.items-center.justify-center
@@ -17,7 +19,7 @@
     #mobile-menu{class: "hidden absolute top-[90px] right-0 w-full bg-white shadow-xl z-50"}
       .flex.flex-col.items-center.py-4.space-y-4
         = link_to "Homepage", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
-        = link_to "Login", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
+        = link_to "Login", "/signIn", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
         = link_to "Start A Chesed Train", "#", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
     :javascript
       function toggleMenu() {
