@@ -87,4 +87,8 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+  # Add specific allowed hosts for production
+  config.hosts << "your-domain.com"
+  config.hosts << "https://0091-185-107-80-250.ngrok-free.app/"
 end
